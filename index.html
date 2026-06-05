@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0123)file:///Users/gwakda/Documents/Codex/2026-06-05/files-mentioned-by-the-user-sdme/outputs/sdme-comparison-with-estimate.html -->
+<!-- saved from url=(0175)file:///Users/gwakda/Desktop/%E1%84%89%E1%85%B3%E1%84%83%E1%85%B3%E1%84%86%E1%85%A6%20%E1%84%80%E1%85%A1%E1%84%80%E1%85%A7%E1%86%A8%20%E1%84%87%E1%85%B5%E1%84%80%E1%85%AD.html -->
 <html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,12 +130,12 @@ footer a:hover{text-decoration:underline}
 
 /* MOBILE */
 @media(max-width:640px){
-  nav{height:44px}
+  nav{position:static;height:44px}
   .nav-inner{padding:0 14px}
   .nav-title{font-size:14px}
   .nav-sub{font-size:10px}
   .hero{padding:44px 16px 36px}
-  .controls{top:44px}
+  .controls{position:sticky;top:0;z-index:120;padding:0;background:var(--canvas);box-shadow:0 1px 0 var(--hairline)}
   .controls-inner{padding:0}
   .tabs{padding:0 16px}
   .tab{padding:10px 14px;font-size:13px}
@@ -147,22 +147,33 @@ footer a:hover{text-decoration:underline}
   .price-filter input[type=range]{width:100%;min-width:0}
   #priceRangeLabel{min-width:88px}
   #likedOnlyBtn{flex:1 1 100%}
-  thead th{top:198px;padding:8px 10px;font-size:10px}
-  .table-section{padding:0 0 60px}
-  table{font-size:12px}
-  tbody td{padding:10px 10px}
-  .cell-name{font-size:13px}
-  .cell-sb{font-size:13px}
-  .cell-price{font-size:11px}
+  .table-section{padding:0 12px 60px}
+  table,thead,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tbody tr{position:relative;margin:10px 0;padding:12px 12px 10px;border:1px solid var(--hairline);border-radius:8px;background:var(--canvas)}
+  tbody tr:hover{background:var(--canvas)}
+  tbody td{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;align-items:start;padding:7px 0;border-bottom:1px solid var(--divider)}
+  tbody td:last-child{border-bottom:0}
+  tbody td:first-child{display:block;width:auto;padding:0 0 8px;border-bottom:0}
+  tbody td:first-child .wish-btn{width:34px;height:34px}
+  tbody td:nth-child(2){display:block;padding:0 0 9px;border-bottom:1px solid var(--divider)}
+  tbody td:nth-child(n+3)::before{font-size:11px;font-weight:700;color:var(--ink-48);line-height:1.5}
+  tbody td:nth-child(3)::before{content:"하우투웨딩"}
+  tbody td:nth-child(4)::before{content:"신부야"}
+  tbody td:nth-child(5)::before{content:"베리굿"}
+  tbody td:nth-child(6)::before{content:"다이렉트"}
+  tbody td:nth-child(7)::before{content:"제이웨딩"}
+  tbody td:nth-child(8)::before{content:"최저"}
+  .cell-name{font-size:15px;word-break:keep-all;overflow-wrap:anywhere;white-space:normal;padding-right:42px}
+  .cell-sb{font-size:13px;min-width:0}
+  .cell-price{font-size:12px;min-width:0}
+  .badge{width:max-content}
   .count-bar{padding:6px 16px}
   .estimate-section{padding:14px 16px 6px}
   .estimate-head{flex-direction:column}
   .estimate-total{text-align:left}
   .estimate-grid{grid-template-columns:1fr}
   .estimate-extra{grid-template-columns:1fr}
-  /* 모바일: 베리굿/다이렉트/제이웨딩 컬럼 축소 */
-  .col-ht,.col-bv,.col-dr,.col-jw{display:none}
-  .show-all .col-ht,.show-all .col-bv,.show-all .col-dr,.show-all .col-jw{display:table-cell}
 }
 @media(max-width:419px){
   .hero h1{font-size:24px}
@@ -176,15 +187,15 @@ footer a:hover{text-decoration:underline}
 
 <nav>
   <div class="nav-inner">
-    <span class="nav-title">스드메가격한눈에 (제작 옹시미)</span>
-    <span class="nav-sub">실제가격과 다를 수 있으며 참고용입니다.</span>
+    <span class="nav-title"></span>
+    <span class="nav-sub">제작 네이버블로그 옹시미</span>
   </div>
 </nav>
 
 <div class="hero">
   <h1>스드메 가격 한눈에</h1>
-  <p>하우투웨딩·신부야·베리굿·다이렉트·제이웨딩 가격을 비교해보세요.</p>
-  <p class="notice">2차 가공/재배포 절대 금지</p>
+  <p>실제가격과 다를 수 있으며 참고용입니다 :)</p>
+  <p class="notice">**2차 가공/재배포 절대 금지**</p>
 </div>
 
 <div class="controls">
